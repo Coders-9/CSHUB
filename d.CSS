@@ -1,5 +1,5 @@
 * { /* normalize */
-    margin: 0; /* عشان الزوايا  */
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Tajwal', sans-serif;
 }
@@ -10,7 +10,7 @@ body {
     font-weight: 400;
 }
 a {
-    text-decoration: none; /* منع التسطير من الروابط اللي ب a href */ 
+    text-decoration: none;
     color: inherit;
 }
 .top-bar {
@@ -20,7 +20,7 @@ a {
     background: transparent;
     backdrop-filter: blur(10px);
     box-shadow: none;
-    z-index: 1000;  /* عشان النافبار ما يتغطى لما تسوي سكرول للموقع كامل */
+    z-index: 1000; 
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -570,7 +570,6 @@ a {
     padding-bottom: 80px;
     min-height: 100vh;
 }
-
 .university-email-header {
     background-color: #3E1882;
     color: #fff;
@@ -728,7 +727,7 @@ img[src*="LandingBage\Group 25.png"] {
     font-weight: 500;
 }
 
-/* certificates.html) 🏅 */
+/* certificates.html */
 .certificates-page-container {
     max-width: 1250px;
     margin: 0 auto;
@@ -915,7 +914,7 @@ img[src*="LandingBage\Group 25.png"] {
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 0 auto; /* توسيط البطاقة */
+    margin: 0 auto;
     padding: 30px;
     border: 1px solid #ddd;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -930,7 +929,7 @@ img[src*="LandingBage\Group 25.png"] {
     font-size: 2.2rem;
     color: #4a4a4a; 
     margin-bottom: 20px;
-    font-weight: 800; /* خط ثقيل */
+    font-weight: 800; 
     border-bottom: 3px solid #003267; 
     display: inline-block;
     padding-bottom: 5px;
@@ -954,3 +953,4 @@ img[src*="LandingBage\Group 25.png"] {
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.2s;
 }
+
