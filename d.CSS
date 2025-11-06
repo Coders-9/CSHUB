@@ -952,39 +952,43 @@ a {
 /* ---------------------------------------------------- */
 
 @media (max-width: 1000px) {
-
-    /* --- تعديل النافبار (جعله أفقياً قابلاً للتمرير على الجوال) --- */
+    
+    /* --- تعديل النافبار (أفقي وقابل للتمرير على الجوال) --- */
     .top-bar {
         justify-content: flex-start; /* لتركيز العناصر في اليمين */
         padding: 0 10px;
         overflow-x: auto; /* يجعل النافبار قابلاً للتمرير أفقياً */
-        height: 70px;
         white-space: nowrap; /* لمنع الروابط من النزول لسطر جديد */
     }
     .top-bar nav {
-        display: inline-block; /* ليتناسب مع التمرير الأفقي */
+        display: inline-block; 
         margin-right: 20px;
+        position: static; /* إلغاء خصائص الهامبرغر */
+        transform: none;
+        height: auto;
     }
     .top-bar nav ul {
         display: flex; 
+        flex-direction: row; /* التأكيد على أنها أفقية */
         gap: 20px;
+        padding: 0;
     }
     .top-bar nav ul li a {
         font-size: 16px; 
     }
     .top-bar .logo-text {
-        flex-shrink: 0; /* لمنع الشعار من التصغير عند التمرير */
+        flex-shrink: 0; 
         margin-left: 20px;
     }
     .menu-toggle {
         display: none; /* إخفاء زر الهمبرغر نهائياً */
     }
 
-    /* --- تعديلات باقي الأقسام --- */
+    /* --- تعديلات الصفحة الرئيسية (Index) --- */
     .main-content {
         flex-direction: column; /* تحويل التخطيط الأفقي إلى عمودي */
         height: auto;
-        padding: 60px 20px;
+        padding: 90px 20px 40px;
     }
     .text-box {
         width: 100%;
@@ -992,12 +996,14 @@ a {
         padding: 40px 30px;
         margin-bottom: 40px;
         text-align: center;
+        order: 0; 
     }
     .text-box p {
         font-size: 26px;
     }
     .illustration {
         padding-left: 0;
+        order: 1;
     }
     .illustration img {
         width: 90%;
@@ -1006,39 +1012,80 @@ a {
     .more-section {
         padding: 40px 20px;
     }
+    .about-cards {
+        flex-direction: column; /* ترتيب البطاقات عمودياً */
+        max-width: 500px;
+    }
     .about-cards .card {
-        width: 45%;
-        min-height: auto;
+        width: 100%;
     }
     .traits-grid,
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* عمودين للأجهزة اللوحية */
         gap: 15px;
         max-width: 600px;
     }
-    .cert-card {
-        grid-template-columns: 80px 1fr;
-        gap: 15px;
-        padding: 20px;
-    }
-    .cert-logo-container {
-        grid-row: 1 / 3;
-    }
-    .cert-details {
-        grid-column: 2 / 3;
-        border-right: none;
-        padding-right: 0;
-        margin-top: 15px;
-        align-items: flex-end;
-        padding-top: 10px;
-        border-top: 1px solid #eee;
+
+    /* --- تعديلات الخطة الدراسية (StudyPlan) --- */
+    .header-section {
+        padding: 50px 20px;
+        border-radius: 0 0 30px 30px;
+        margin-bottom: 30px;
     }
     .header-section .main-title {
         font-size: 2.5em;
     }
-    .course-table {
-        min-width: 700px; /* لضمان ظهور الجدول بعرضه الكامل (مما يتطلب تمرير أفقي) */
+    .alert-box {
+        max-width: 90%;
     }
+    .table-responsive {
+        overflow-x: auto; /* يجعل الجدول قابلاً للتمرير أفقياً */
+        padding: 0;
+    }
+    .course-table {
+        min-width: 700px; /* ضمان العرض الكامل للجداول */
+    }
+    
+    /* --- تعديلات المصادر (StudentResources) --- */
+    .university-email-header {
+        max-width: 90%;
+        padding: 25px 30px;
+        margin-bottom: 50px;
+    }
+    .extra-subscriptions-section {
+        padding: 0 15px;
+    }
+    .subscription-card {
+        max-width: 90%;
+    }
+    
+    /* --- تعديلات الشهادات (Certificates) --- */
+    .page-container {
+        margin: 90px auto 40px auto;
+        max-width: 95%;
+    }
+    .cert-card {
+        display: flex;
+        flex-direction: column; /* ترتيب البطاقة عمودياً */
+        align-items: center;
+        text-align: center;
+        border-right: 5px solid #7a00ff;
+        padding: 15px;
+    }
+    .cert-logo-container {
+        margin-bottom: 10px;
+    }
+    .cert-details {
+        align-items: center;
+        padding-right: 0;
+        border-right: none;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* --- تعديلات الفوتر (Footer) --- */
     .footer-container {
         flex-direction: column;
         gap: 30px;
@@ -1048,60 +1095,29 @@ a {
         width: 90%;
         max-width: 450px;
     }
-    .page-container {
-        margin-top: 80px;
-    }
 }
 
 /* ---------------------------------------------------- */
-/* شاشات الجوال الصغيرة (Mobile) (أقل من 600px)         */
+/* شاشات الجوال الصغيرة جداً (أقل من 600px)             */
 /* ---------------------------------------------------- */
 @media (max-width: 600px) {
-    .main-content {
-        padding: 20px;
-        padding-top: 90px;
-    }
     .text-box p {
         font-size: 22px;
     }
-    .about-cards {
-        flex-direction: column;
-    }
-    .about-cards .card {
-        width: 100%;
-    }
     .traits-grid,
     .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: 1fr; /* عمود واحد لشبكات الجوال الصغيرة */
         max-width: 400px;
-    }
-    .cert-card {
-        grid-template-columns: 1fr;
-        padding: 20px 15px;
-    }
-    .cert-card::before {
-        content: none;
-    }
-    .certs-grid {
-        border-right: none;
-    }
-    .cert-logo-container {
-        grid-row: auto;
-        margin: 0 auto 10px auto;
-    }
-    .cert-content-area,
-    .cert-details {
-        text-align: center;
-        border-right: none;
-    }
-    .cert-details {
-        align-items: center;
     }
     .header-section .main-title {
         font-size: 2em;
     }
-    .extra-subscriptions-section .section-title {
-        font-size: 24px;
+    .certs-grid {
+        border-right: none;
+    }
+    .certs-category-section .category-title {
+        font-size: 22px;
     }
 }
+
+
