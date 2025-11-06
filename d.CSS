@@ -951,12 +951,14 @@ a {
 @media (max-width: 1000px) {
     
     .top-bar {
-   position: fixed;
+ position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); 
-    backdrop-filter: blur(8px); 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    
+    background-color: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(10px); 
+    
+    box-shadow: 0 1px 15px rgba(0,0,0,0.05);
     z-index: 1000;
     transition: all 0.3s ease;
     display: flex;
@@ -964,7 +966,8 @@ a {
     justify-content: space-around; 
     height: 70px;
     padding: 0 40px;
-    overflow-x: hidden; 
+overflow-x: hidden; 
+    white-space: nowrap;
     white-space: nowrap;
     }
     .top-bar nav {
@@ -1118,6 +1121,7 @@ a {
         font-size: 22px;
     }
 }
+
 
 
 
