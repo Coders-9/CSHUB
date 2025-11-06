@@ -946,14 +946,43 @@ a {
     line-height: 1.8;
 }
 
+/* ---------------------------------------------------- */
+/* استعلامات الوسائط (Media Queries)                   */
+/* هذا الكود يستهدف الشاشات الأصغر من 1000 بكسل وما دونها */
+/* ---------------------------------------------------- */
 
-}
 @media (max-width: 1000px) {
+
+    /* --- تعديل النافبار (جعله أفقياً قابلاً للتمرير على الجوال) --- */
+    .top-bar {
+        justify-content: flex-start; /* لتركيز العناصر في اليمين */
+        padding: 0 10px;
+        overflow-x: auto; /* يجعل النافبار قابلاً للتمرير أفقياً */
+        height: 70px;
+        white-space: nowrap; /* لمنع الروابط من النزول لسطر جديد */
+    }
+    .top-bar nav {
+        display: inline-block; /* ليتناسب مع التمرير الأفقي */
+        margin-right: 20px;
+    }
     .top-bar nav ul {
+        display: flex; 
         gap: 20px;
     }
+    .top-bar nav ul li a {
+        font-size: 16px; 
+    }
+    .top-bar .logo-text {
+        flex-shrink: 0; /* لمنع الشعار من التصغير عند التمرير */
+        margin-left: 20px;
+    }
+    .menu-toggle {
+        display: none; /* إخفاء زر الهمبرغر نهائياً */
+    }
+
+    /* --- تعديلات باقي الأقسام --- */
     .main-content {
-        flex-direction: column;
+        flex-direction: column; /* تحويل التخطيط الأفقي إلى عمودي */
         height: auto;
         padding: 60px 20px;
     }
@@ -1004,17 +1033,11 @@ a {
         padding-top: 10px;
         border-top: 1px solid #eee;
     }
-    .header-section {
-        padding: 50px 20px;
-    }
     .header-section .main-title {
         font-size: 2.5em;
     }
-    .header-section .subtitle {
-        font-size: 1.2em;
-    }
     .course-table {
-        min-width: 700px;
+        min-width: 700px; /* لضمان ظهور الجدول بعرضه الكامل (مما يتطلب تمرير أفقي) */
     }
     .footer-container {
         flex-direction: column;
@@ -1025,18 +1048,18 @@ a {
         width: 90%;
         max-width: 450px;
     }
-}
-@media (max-width: 600px) {
-    .top-bar nav {
-        display: none;
+    .page-container {
+        margin-top: 80px;
     }
+}
+
+/* ---------------------------------------------------- */
+/* شاشات الجوال الصغيرة (Mobile) (أقل من 600px)         */
+/* ---------------------------------------------------- */
+@media (max-width: 600px) {
     .main-content {
         padding: 20px;
         padding-top: 90px;
-    }
-    .text-box {
-        padding: 30px 20px;
-        border-radius: 30px;
     }
     .text-box p {
         font-size: 22px;
@@ -1053,51 +1076,15 @@ a {
         gap: 10px;
         max-width: 400px;
     }
-    .trait, .skill {
-        height: auto;
-        padding: 10px;
-    }
-    .header-section .main-title {
-        font-size: 2em;
-    }
-    .header-section .subtitle {
-        font-size: 1em;
-    }
-    .alert-box {
-        padding: 15px 20px;
-    }
-    .level-title {
-        font-size: 18px;
-        padding: 10px 20px 8px 20px;
-    }
-    .university-email-header {
-        padding: 20px;
-        margin-bottom: 40px;
-        border-radius: 15px;
-    }
-    .university-email-header h2 {
-        font-size: 24px;
-    }
-    .extra-subscriptions-section .section-title {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-    .subscription-card .text-content {
-        padding-top: 35px;
-    }
-    .page-container {
-        margin-top: 80px;
-        padding-bottom: 40px;
-    }
-    .header-title {
-        font-size: 30px;
-    }
-    .certs-category-section .category-title {
-        font-size: 24px;
-    }
     .cert-card {
         grid-template-columns: 1fr;
         padding: 20px 15px;
+    }
+    .cert-card::before {
+        content: none;
+    }
+    .certs-grid {
+        border-right: none;
     }
     .cert-logo-container {
         grid-row: auto;
@@ -1111,16 +1098,10 @@ a {
     .cert-details {
         align-items: center;
     }
-    .details-button {
-        margin-top: 10px;
+    .header-section .main-title {
+        font-size: 2em;
     }
-    .cert-card::before {
-        content: none;
-    }
-    .certs-grid {
-        border-right: none;
-    }
-    .message-card {
-        padding: 30px 20px;
+    .extra-subscriptions-section .section-title {
+        font-size: 24px;
     }
 }
