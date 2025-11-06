@@ -945,3 +945,182 @@ a {
     color: #5a5a5a;
     line-height: 1.8;
 }
+
+
+}
+@media (max-width: 1000px) {
+    .top-bar nav ul {
+        gap: 20px;
+    }
+    .main-content {
+        flex-direction: column;
+        height: auto;
+        padding: 60px 20px;
+    }
+    .text-box {
+        width: 100%;
+        max-width: 500px;
+        padding: 40px 30px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .text-box p {
+        font-size: 26px;
+    }
+    .illustration {
+        padding-left: 0;
+    }
+    .illustration img {
+        width: 90%;
+        max-width: 400px;
+    }
+    .more-section {
+        padding: 40px 20px;
+    }
+    .about-cards .card {
+        width: 45%;
+        min-height: auto;
+    }
+    .traits-grid,
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 600px;
+    }
+    .cert-card {
+        grid-template-columns: 80px 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+    .cert-logo-container {
+        grid-row: 1 / 3;
+    }
+    .cert-details {
+        grid-column: 2 / 3;
+        border-right: none;
+        padding-right: 0;
+        margin-top: 15px;
+        align-items: flex-end;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+    .header-section {
+        padding: 50px 20px;
+    }
+    .header-section .main-title {
+        font-size: 2.5em;
+    }
+    .header-section .subtitle {
+        font-size: 1.2em;
+    }
+    .course-table {
+        min-width: 700px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .footer-box {
+        width: 90%;
+        max-width: 450px;
+    }
+}
+@media (max-width: 600px) {
+    .top-bar nav {
+        display: none;
+    }
+    .main-content {
+        padding: 20px;
+        padding-top: 90px;
+    }
+    .text-box {
+        padding: 30px 20px;
+        border-radius: 30px;
+    }
+    .text-box p {
+        font-size: 22px;
+    }
+    .about-cards {
+        flex-direction: column;
+    }
+    .about-cards .card {
+        width: 100%;
+    }
+    .traits-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 400px;
+    }
+    .trait, .skill {
+        height: auto;
+        padding: 10px;
+    }
+    .header-section .main-title {
+        font-size: 2em;
+    }
+    .header-section .subtitle {
+        font-size: 1em;
+    }
+    .alert-box {
+        padding: 15px 20px;
+    }
+    .level-title {
+        font-size: 18px;
+        padding: 10px 20px 8px 20px;
+    }
+    .university-email-header {
+        padding: 20px;
+        margin-bottom: 40px;
+        border-radius: 15px;
+    }
+    .university-email-header h2 {
+        font-size: 24px;
+    }
+    .extra-subscriptions-section .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .subscription-card .text-content {
+        padding-top: 35px;
+    }
+    .page-container {
+        margin-top: 80px;
+        padding-bottom: 40px;
+    }
+    .header-title {
+        font-size: 30px;
+    }
+    .certs-category-section .category-title {
+        font-size: 24px;
+    }
+    .cert-card {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+    .cert-logo-container {
+        grid-row: auto;
+        margin: 0 auto 10px auto;
+    }
+    .cert-content-area,
+    .cert-details {
+        text-align: center;
+        border-right: none;
+    }
+    .cert-details {
+        align-items: center;
+    }
+    .details-button {
+        margin-top: 10px;
+    }
+    .cert-card::before {
+        content: none;
+    }
+    .certs-grid {
+        border-right: none;
+    }
+    .message-card {
+        padding: 30px 20px;
+    }
+}
