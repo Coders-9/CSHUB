@@ -946,30 +946,37 @@ a {
     line-height: 1.8;
 }
 
-/* ---------------------------------------------------- */
-/* استعلامات الوسائط (Media Queries)                   */
-/* هذا الكود يستهدف الشاشات الأصغر من 1000 بكسل وما دونها */
-/* ---------------------------------------------------- */
+
 
 @media (max-width: 1000px) {
     
-    /* --- تعديل النافبار (أفقي وقابل للتمرير على الجوال) --- */
     .top-bar {
-        justify-content: flex-start; /* لتركيز العناصر في اليمين */
-        padding: 0 10px;
-        overflow-x: auto; /* يجعل النافبار قابلاً للتمرير أفقياً */
-        white-space: nowrap; /* لمنع الروابط من النزول لسطر جديد */
+   position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(8px); 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    height: 70px;
+    padding: 0 40px;
+    overflow-x: hidden; 
+    white-space: nowrap;
     }
     .top-bar nav {
         display: inline-block; 
         margin-right: 20px;
-        position: static; /* إلغاء خصائص الهامبرغر */
+        position: static; 
         transform: none;
         height: auto;
     }
     .top-bar nav ul {
         display: flex; 
-        flex-direction: row; /* التأكيد على أنها أفقية */
+        flex-direction: row; 
         gap: 20px;
         padding: 0;
     }
@@ -981,12 +988,11 @@ a {
         margin-left: 20px;
     }
     .menu-toggle {
-        display: none; /* إخفاء زر الهمبرغر نهائياً */
+        display: none; 
     }
 
-    /* --- تعديلات الصفحة الرئيسية (Index) --- */
     .main-content {
-        flex-direction: column; /* تحويل التخطيط الأفقي إلى عمودي */
+        flex-direction: column;
         height: auto;
         padding: 90px 20px 40px;
     }
@@ -1013,7 +1019,7 @@ a {
         padding: 40px 20px;
     }
     .about-cards {
-        flex-direction: column; /* ترتيب البطاقات عمودياً */
+        flex-direction: column; 
         max-width: 500px;
     }
     .about-cards .card {
@@ -1021,12 +1027,11 @@ a {
     }
     .traits-grid,
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* عمودين للأجهزة اللوحية */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
         max-width: 600px;
     }
 
-    /* --- تعديلات الخطة الدراسية (StudyPlan) --- */
     .header-section {
         padding: 50px 20px;
         border-radius: 0 0 30px 30px;
@@ -1039,14 +1044,13 @@ a {
         max-width: 90%;
     }
     .table-responsive {
-        overflow-x: auto; /* يجعل الجدول قابلاً للتمرير أفقياً */
+        overflow-x: auto;
         padding: 0;
     }
     .course-table {
-        min-width: 700px; /* ضمان العرض الكامل للجداول */
+        min-width: 700px;
     }
-    
-    /* --- تعديلات المصادر (StudentResources) --- */
+
     .university-email-header {
         max-width: 90%;
         padding: 25px 30px;
@@ -1059,14 +1063,13 @@ a {
         max-width: 90%;
     }
     
-    /* --- تعديلات الشهادات (Certificates) --- */
     .page-container {
         margin: 90px auto 40px auto;
         max-width: 95%;
     }
     .cert-card {
         display: flex;
-        flex-direction: column; /* ترتيب البطاقة عمودياً */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         border-right: 5px solid #7a00ff;
@@ -1084,9 +1087,7 @@ a {
         width: 100%;
         margin-top: 10px;
     }
-    
-    /* --- تعديلات الفوتر (Footer) --- */
-    .footer-container {
+        .footer-container {
         flex-direction: column;
         gap: 30px;
         align-items: center;
@@ -1097,16 +1098,14 @@ a {
     }
 }
 
-/* ---------------------------------------------------- */
-/* شاشات الجوال الصغيرة جداً (أقل من 600px)             */
-/* ---------------------------------------------------- */
+
 @media (max-width: 600px) {
     .text-box p {
         font-size: 22px;
     }
     .traits-grid,
     .skills-grid {
-        grid-template-columns: 1fr; /* عمود واحد لشبكات الجوال الصغيرة */
+        grid-template-columns: 1fr; 
         max-width: 400px;
     }
     .header-section .main-title {
@@ -1119,5 +1118,6 @@ a {
         font-size: 22px;
     }
 }
+
 
 
