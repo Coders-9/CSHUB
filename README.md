@@ -58,21 +58,22 @@
 هيكل المشروع :
 
 CSHUB/
-├── index.html              # الصفحة الرئيسية
-├── studyplan.html          # صفحة الخطة الدراسية
-├── roadmap.html            #  سيتم إضافتها قريبا (: خارطة الطريق للتخصص
-├── StudentResources.html   # أدوات ومصادر الطالب
-├── certificates.html       # الشهادات المهنية
+├── index.html                # الصفحة الرئيسية
+├── studyplan.html            # الخطة الدراسية
+├── roadmap.html              # خارطة الطريق
+├── StudentResources.html     # أدوات ومصادر الطالب
+├── certificates.html         # الشهادات المهنية
 │
-├── d.css                   # التنسيقات العامة للموقع
-├── student_tools.css       # تنسيقات خاصة بأدوات الطالب
+├── d.css                     # التنسيقات العامة للموقع
+├── student_tools.css         # تنسيقات خاصة بأدوات الطالب
 │
-├── voice.js                # سيتم إضافتها قريبا (: ملف الأوامر الصوتية (دعم الوصول)
+├── voice.js                  # الأوامر الصوتية (دعم الوصول)
 │
-├── LandingBage/            # الصور والرسومات المستخدمة
+├── LandingBage/              # الصور والرسومات المستخدمة
 │   ├── Student.png
+│   ├── studentwithmab.png
 │   ├── studentwithmab.png
 │   ├── Group 24.png
 │   └── ...
 │
-└── README.md               # هذا الملف
+└── README.md                 # ملف التوثيق الخاص بالمشروع
