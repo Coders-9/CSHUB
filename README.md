@@ -58,15 +58,17 @@
 
 ---
 CSHUB/
-├── index.html                # الصفحة الرئيسية
-├── studyplan.html            # الخطة الدراسية
-├── roadmap.html              # خارطة المواد (تحت التطوير)
-├── StudentResources.html     # أدوات ومصادر الطالب
-├── certificates.html         # الشهادات المهنية
-├── d.css                     # التنسيقات العامة للموقع
-├── student_tools.css         # تنسيقات خاصة بأدوات الطالب
-├── LandingPage/              # مجلد الصور والرسومات
-│   ├── (جميع الصور والرسومات)
-└── README.md                 # ملف التوثيق
+├── index.html                 # الصفحة الرئيسية
+├── studyplan.html             # الخطة الدراسية
+├── StudentResources.html      # أدوات ومصادر الطالب
+├── certificates.html          # الشهادات المهنية
+│
+├── d.CSS                      # التنسيقات العامة للموقع
+├── student_tools.css          # تنسيقات خاصة بأدوات الطالب
+│
+├── LandingBage/               # الصور والرسومات المستخدمة
+│
+│
+└── README.md                  # ملف التوثيق الخاص بالمشروع
 
 ---
