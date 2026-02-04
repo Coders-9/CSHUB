@@ -58,23 +58,22 @@
 
 
 ```
-GuideMe/
-├── index.html              # الصفحة الرئيسية
-├── styles.css              # التنسيقات الرئيسية
-├── app.js                  # منطق التطبيق الرئيسي
-├── manifest.json           # ملف إعدادات الإضافة
-├── README.md               # هذا الملف
+CSHUB/
+├── index.html                # الصفحة الرئيسية
+├── studyplan.html            # الخطة الدراسية
+├── roadmap.html              # سيتم إضافتها قريبا (: , خارطة المواد
+├── StudentResources.html     # أدوات ومصادر الطالب
+├── certificates.html         # الشهادات المهنية
 │
-├── extension/              # ملفات الإضافة
-│   ├── popup.html         # واجهة الإضافة
-│   ├── popup.js           # منطق واجهة الإضافة
-│   ├── content.js         # سكريبت تعديل الصفحات
-│   ├── content.css        # تنسيقات تعديل الصفحات
-│   ├── background.js      # خدمة الخلفية
-│   └── icons/             # أيقونات الإضافة
-│       ├── icon16.png
-│       ├── icon48.png
-│       └── icon128.png
+├── d.css                     # التنسيقات العامة للموقع
+├── student_tools.css         # تنسيقات خاصة بأدوات الطالب
+│
+├── voice.js                  # سيتم إضافتها قريبا (: , الأوامر الصوتية (دعم الوصول)
+│
+├── LandingBage/              # الصور والرسومات المستخدمة
+│
+└── README.md                 # هذا الملف
+
 ```
 
 
