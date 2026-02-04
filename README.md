@@ -26,7 +26,7 @@
 
 - **JavaScript (ES6+)**  
 
----
+
 
 ### Web APIs
 - **Speech Synthesis API**  
